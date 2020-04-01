@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "701283687723",
+    "firebase_url": "https://automaticphonesilencer-fc27b.firebaseio.com",
+    "project_id": "automaticphonesilencer-fc27b",
+    "storage_bucket": "automaticphonesilencer-fc27b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701283687723:android:4a0cf7678385938586b96e",
+        "android_client_info": {
+          "package_name": "com.example.automaticphonesilencer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "701283687723-lapuuakne2022kp9vq6asp4jedrt4lnp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.automaticphonesilencer",
+            "certificate_hash": "9d951ed2f187be1b780ea4497fa53e8dd81e6dc1"
+          }
+        },
+        {
+          "client_id": "701283687723-9j0eoic1o31qqs1p0djvuqeh7qiejvu2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVUEsL4VMf66DHwEoiEOjlEUcELF1tJkQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "701283687723-9j0eoic1o31qqs1p0djvuqeh7qiejvu2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

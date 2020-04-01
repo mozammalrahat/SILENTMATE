@@ -1,0 +1,2 @@
+rootProject.name='AutomaticPhoneSilencer'
+include ':app'
