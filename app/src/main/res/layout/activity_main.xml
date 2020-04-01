@@ -11,6 +11,13 @@
 
     >
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/textLocationId"
+        android:text="Location Updatesn : 122.3333    96.85973"
+        />
+
     <Button
         android:layout_width="100dp"
         android:layout_height="50dp"

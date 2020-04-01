@@ -15,9 +15,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Locale;
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 
@@ -27,14 +32,17 @@ public class MainActivity extends AppCompatActivity {
     Button  silentMode, vibrateMode, ringerMode;
     TextView latitudeId;
     TextView longitudeId;
+    TextView txtLocation;
     EditText placeNameId;
 
-    Double latitude,longitude;
+    Double latitude,longitude,wayLatitude,wayLongitude;
 
 
     AudioManager am;
 
-    private FusedLocationProviderClient client;
+    private FusedLocationProviderClient client, mFusedLocationClient;
+    private LocationRequest locationRequest;
+    private LocationCallback locationCallback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +66,9 @@ public class MainActivity extends AppCompatActivity {
         mysavedLocations = (Button) findViewById(R.id.savedLocationsId);
         logOut = (Button)findViewById(R.id.logoutid) ;
 
+        txtLocation = (TextView)findViewById(R.id.textLocationId);
 
+        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
 
 
@@ -89,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
                 am.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
             }
         });
+
+
 
 
         scanLocation.setOnClickListener(new View.OnClickListener() {
@@ -148,7 +160,30 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
+
+        locationRequest = LocationRequest.create();
+        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        locationRequest.setInterval(20 * 1000);
+        locationCallback = new LocationCallback() {
+            @Override
+            public void onLocationResult(LocationResult locationResult) {
+                if (locationResult == null) {
+                    return;
+                }
+                for (Location location : locationResult.getLocations()) {
+                    if (location != null) {
+                        wayLatitude = location.getLatitude();
+                        wayLongitude = location.getLongitude();
+                        txtLocation.setText(String.format(Locale.US, "%s -- %s", wayLatitude, wayLongitude));
+
+
+                    }
+                }
+            }
+        };
     }
+
+
     private void requestPermission(){
         ActivityCompat.requestPermissions(this,new String[]{ACCESS_FINE_LOCATION},1);
     }
