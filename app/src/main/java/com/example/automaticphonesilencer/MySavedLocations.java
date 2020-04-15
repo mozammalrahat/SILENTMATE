@@ -21,20 +21,20 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class MySavedLocations extends AppCompatActivity {
-
-    ListView listView;
-    Button homeButton;
+                                                                                                    //DECLARING VARIABLES
+    ListView listView;                                                                              //DECLARING VARIABLE FOR LIST VIEW
+    Button homeButton;                                                                              //DECLARING BUTTON FOR GOING TO HOME SCREEN
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_saved_locations);
-
+                                                                                                    //FINDING BUTTON AND LISTVIEW FROM XML FILE
         listView = (ListView)findViewById(R.id.listViewId);
         homeButton = (Button)findViewById(R.id.homeid);
 
 
-        homeButton.setOnClickListener(new View.OnClickListener() {
+        homeButton.setOnClickListener(new View.OnClickListener() {                                  //GOING BACK TO HOME ACTIVITY
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MySavedLocations.this,MainActivity.class));
@@ -48,13 +48,13 @@ public class MySavedLocations extends AppCompatActivity {
 
 
 
-        final ArrayList<String> list = new ArrayList<>();
-        final ArrayAdapter adapter = new ArrayAdapter<String>(this,R.layout.list_item,list);
+        final ArrayList<String> list = new ArrayList<>();                                           //DECLARING ARRAYLIST FOR PUTTING PLACES FROM DATABASE
+        final ArrayAdapter adapter = new ArrayAdapter<String>(this,R.layout.list_item,list);//DECLARING ARRAY ADAPTER FOR ADJUSTING THE PLACES INTO LISTVIEW
         listView.setAdapter(adapter);
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Places");
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Places");//GETTING DATA REFERENCE FROM FIREBASE REALTIME DATABASE
 
-        reference.addValueEventListener(new ValueEventListener() {
+        reference.addValueEventListener(new ValueEventListener() {                                  //GETTING DATA FROM FIREBASE REALTIME DATABASE AND SETTING THEM INTO LISTVIEW
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 list.clear();

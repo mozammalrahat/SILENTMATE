@@ -6,24 +6,56 @@
     android:layout_height="match_parent"
     tools:context=".RegisterActivity"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@drawable/a03">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:hint="User Name"
+        android:id="@+id/usernameid"
+        android:textColor="@color/self_color"
+        android:textColorHint="@color/self_color"
+        />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:hint="Email"
         android:id="@+id/emailid"
+        android:textColor="@color/self_color"
+        android:textColorHint="@color/self_color"
         />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:hint="Password"
         android:id="@+id/passwordid"
+        android:inputType="numberPassword"
+        android:textColor="@color/self_color"
+        android:textColorHint="@color/self_color"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:hint="Confirm Password"
+        android:id="@+id/confirm_passwordid"
+        android:inputType="numberPassword"
+        android:textColorHint="@color/self_color"
+        android:textColor="@color/self_color"
         />
     <Button
         android:id="@+id/registerid2"
-        android:layout_width="200dp"
-        android:layout_height="75dp"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
         android:text="Register"
+        android:background="@drawable/custom_button"
+        android:layout_margin="15dp"
+        />
+    <Button
+        android:id="@+id/registermenubuttonid"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="Menu"
+        android:background="@drawable/custom_button"
         />
 
 </LinearLayout>

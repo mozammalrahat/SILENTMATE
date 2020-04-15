@@ -8,6 +8,8 @@
     tools:context=".MainActivity"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@drawable/a03"
+
 
     >
 
@@ -15,20 +17,29 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:id="@+id/textLocationId"
-        android:text="Location Updatesn : 122.3333    96.85973"
+        android:text="Location Updates : 122.3333    96.85973"
+        android:textColor="@color/self_color"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/addressid"
+        android:text="Address :"
+        android:textColor="@color/self_color"
         />
 
     <Button
         android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_height="35dp"
         android:text="Scan"
+        android:background="@drawable/custom_button"
         android:id="@+id/getLocation"
 
         />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:orientation="vertical"
         >
 
@@ -40,11 +51,13 @@
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:text="Latitude :"
+                android:textColor="@color/self_color"
                 android:textStyle="bold"/>
             <TextView
                 android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:id="@+id/textViewId1"
+                android:textColor="@color/self_color"
                 android:text="122.568742"
                 />
 
@@ -61,12 +74,14 @@
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:text="Longitude :"
+                android:textColor="@color/self_color"
                 android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:id="@+id/textViewId2"
+                android:textColor="@color/self_color"
                 android:text="80.325689"
                 />
 
@@ -78,54 +93,112 @@
     </LinearLayout>
 
 
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Place Name"
+        android:textColorHint="@color/self_color"
+        android:textColor="@color/self_color"
         android:id="@+id/placeNameId"
         />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Save Location"
-        android:id="@+id/saveLocationid"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Saved Locations"
-        android:id="@+id/savedLocationsId"
-        />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="15dp"
-        android:layout_toRightOf="@+id/textView1"
-        android:text="silent" />
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_marginTop="15dp"
-        android:text="vibrate" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="205dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:text="Save Location"
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_below="@+id/button2"
-        android:layout_marginTop="15dp"
-        android:text="ringer" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Logout"
-        android:id="@+id/logoutid"
-        />
+                android:background="@drawable/custom_button"
+                android:id="@+id/saveLocationid"/>
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:text="Saved Locations"
+                android:background="@drawable/custom_button"
+                android:id="@+id/savedLocationsId"
+                />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/custom_button"
+                android:layout_below="@+id/textView1"
+                android:layout_toRightOf="@+id/textView1"
+                android:text="silent" />
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/custom_button"
+                android:id="@+id/startserviceid"
+                android:text="startservice"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="205dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/button1"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/custom_button"
+                android:text="vibrate" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/button2"
+                android:layout_below="@+id/button2"
+                android:background="@drawable/custom_button"
+                android:layout_marginTop="15dp"
+                android:text="ringer" />
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:text="Logout"
+                android:id="@+id/logoutid"
+                android:background="@drawable/custom_button"
+
+                />
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/custom_button"
+                android:id="@+id/stopserviceid"
+                android:text="stopservice"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
 
 
 </LinearLayout>

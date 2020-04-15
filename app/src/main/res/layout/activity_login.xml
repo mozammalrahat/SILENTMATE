@@ -6,27 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@drawable/a03"
+    >
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:hint="Email"
+        android:textColor="@color/self_color"
+        android:textColorHint="@color/self_color"
         android:id="@+id/loginemailid"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:hint="Password"
         android:id="@+id/loginpasswordid"
+        android:textColorHint="@color/self_color"
+        android:textColor="@color/self_color"
+        android:inputType="numberPassword"
+
         />
 
 
 
     <Button
         android:layout_width="200dp"
-        android:layout_height="75dp"
+        android:layout_height="60dp"
         android:text="Login"
         android:id="@+id/loginid"
+        android:background="@drawable/custom_button"
+        android:layout_margin="15dp"
+        />
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:background="@drawable/custom_button"
+        android:text="Menu"
+        android:id="@+id/menubuttonid"
         />
 
 
