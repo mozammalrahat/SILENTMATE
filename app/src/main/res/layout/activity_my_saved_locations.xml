@@ -6,20 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".MySavedLocations"
     android:orientation="vertical"
-    android:background="@drawable/a03"
+    android:background="@drawable/a001"
 
     >
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home"
-        android:id="@+id/homeid"
-        android:background="@drawable/custom_button"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        >
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/homeid"
+            android:background="@drawable/ic_arrow_back_black_24dp"
             />
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="My Saved Locations"
+            android:textColor="@color/self_color"
+            android:textSize="25dp"
+            android:textAppearance="?android:textAppearanceLarge"
+            />
+
+
+    </LinearLayout>
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:longClickable="true"
         android:id="@+id/listViewId"
 
         />

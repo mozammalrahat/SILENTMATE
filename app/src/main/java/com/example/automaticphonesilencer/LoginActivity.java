@@ -1,10 +1,12 @@
 package com.example.automaticphonesilencer;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,7 +19,8 @@ public class LoginActivity extends AppCompatActivity {
 
     Button loginid,menuButtonId;                                                                    //DECLARING BUTTON VARIABLE FOR ACCESSING LOGIN AND GO BACK MENU
     EditText email,password;                                                                        //EDIT TEXT FOR TAKING EMAIL AND PASSWORD FROM USER FOR LOGIN
-    private FirebaseAuth auth;                                                                      //FIREBASE AUTH VARIABLE FOR GETTING AUTHENTICATION SERVICES FROM FIREBASE
+    private FirebaseAuth auth;                                                                     //FIREBASE AUTH VARIABLE FOR GETTING AUTHENTICATION SERVICES FROM FIREBASE
+    private TextView title;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +31,12 @@ public class LoginActivity extends AppCompatActivity {
         email = (EditText)findViewById(R.id.loginemailid);
         password = (EditText)findViewById(R.id.loginpasswordid);
         menuButtonId = (Button) findViewById(R.id.menubuttonid);
+        title = (TextView)findViewById(R.id.titleid);
 
         auth = FirebaseAuth.getInstance();
+
+        Typeface MLight = Typeface.createFromAsset(getAssets(), "fonts/ML.ttf");
+        title.setTypeface(MLight);
 
         loginid.setOnClickListener(new View.OnClickListener() {                                     //FOR LOGIN INTO USER ACCOUNT
             @Override

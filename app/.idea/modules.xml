@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Auto matic phone silencer android-AutomaticPhoneSilencer.iml" filepath="$PROJECT_DIR$/../Auto matic phone silencer android-AutomaticPhoneSilencer.iml" group="AutomaticPhoneSilencer" />
       <module fileurl="file://$PROJECT_DIR$/../AutomaticPhoneSilencer.iml" filepath="$PROJECT_DIR$/../AutomaticPhoneSilencer.iml" group="AutomaticPhoneSilencer" />
+      <module fileurl="file://$PROJECT_DIR$/AutomaticPhoneSilencer-app.iml" filepath="$PROJECT_DIR$/AutomaticPhoneSilencer-app.iml" group="AutomaticPhoneSilencer/app" />
       <module fileurl="file://$PROJECT_DIR$/app.iml" filepath="$PROJECT_DIR$/app.iml" group="AutomaticPhoneSilencer/app" />
     </modules>
   </component>

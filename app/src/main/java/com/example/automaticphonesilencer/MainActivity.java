@@ -2,11 +2,16 @@ package com.example.automaticphonesilencer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 
+import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Typeface;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -17,6 +22,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +38,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 import java.util.Locale;
 
@@ -41,14 +49,19 @@ public class MainActivity extends AppCompatActivity {
 
     //DECLARING VARIABLES
 
-    private Button scanLocation,saveLocation, mySavedLocations;                                     //DECLARING BUTTON FOR FINDING LOCATION AND SAVE LOCATIONS
-    private Button logOut;
-    private Button startService,stopService;                                                        //DECLARING BUTTON FOR AUTOMATIC SILENT SERVICE ON AND OFF
-    private Button silentMode, vibrateMode, ringerMode;                                             //DECLARING BUTTON FOR ACCESSING DIFFERENT TYPES OF AUDIO MANAGER
+    private CardView scanLocation;
+    private CardView saveLocation, mySavedLocations;                                     //DECLARING BUTTON FOR FINDING LOCATION AND SAVE LOCATIONS
+    private LinearLayout logOut;
+    private CardView startService,stopService;                                                        //DECLARING BUTTON FOR AUTOMATIC SILENT SERVICE ON AND OFF
+//                                                //DECLARING BUTTON FOR ACCESSING DIFFERENT TYPES OF AUDIO MANAGER
     private TextView latitudeId, longitudeId,txtLocation;                                           //DECLARING TEXT VIEW FOR SHOWING SCANNED CURRENT LATITUDE AND LONGITUDE
     private EditText placeNameId;                                                                   //DECLARING EDIT TEXT FOR LOCATION WE WANT TO SAVE
     private Geocoder geocoder;                                                                      //DECLARING GEOCODER REFERENCE VARIABLE
-    private TextView addresstext;                                                                   //DECLARING TEXT VIEW FOR SHOWING AUTOMATIC SCAN PLACES
+    private TextView addresstext;
+    private CardView todolistid;
+    private TextView title;
+    private CardView mobilemodes;
+    //DECLARING TEXT VIEW FOR SHOWING AUTOMATIC SCAN PLACES
     List<Address> addressList;                                                                      //DELACRING A LIST FOR SAVING THE CURRENT ADDRESS SEQUENTIALLY,EX: IICT->SUST_->SYLHET->BANGLADESH
 
     private Handler mHandler = new Handler();                                                       //DECLARING HANDLER FOR CONSEQUENTLY CHECK ADDRESS IF IT IS IN THE DATABASE
@@ -64,10 +77,12 @@ public class MainActivity extends AppCompatActivity {
     private LocationRequest locationRequest;                                                        //REQUESTING SERVER FOR LAST LOCATION
     private LocationCallback locationCallback;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
+
 
                                                                                                     //ASKING PERMISSION FOR LOCATION ACCESSING
 
@@ -78,57 +93,37 @@ public class MainActivity extends AppCompatActivity {
         client = LocationServices.getFusedLocationProviderClient(this);
         latitudeId = (TextView) findViewById(R.id.textViewId1);
         longitudeId = (TextView) findViewById(R.id.textViewId2);
-        silentMode = (Button) findViewById(R.id.button1);
-        vibrateMode = (Button) findViewById(R.id.button2);
-        ringerMode = (Button) findViewById(R.id.button3);
+
         audioManager = (AudioManager) getSystemService(getApplication().AUDIO_SERVICE);
-        scanLocation = (Button) findViewById(R.id.getLocation);
-        saveLocation =(Button) findViewById(R.id.saveLocationid);
+        scanLocation = (CardView) findViewById(R.id.getLocation);
+        saveLocation =(CardView) findViewById(R.id.saveLocationid);
         placeNameId = (EditText) findViewById(R.id.placeNameId);
         addresstext = (TextView)findViewById(R.id.addressid);
         placeNameId.setText(null);
-        mySavedLocations = (Button) findViewById(R.id.savedLocationsId);
-        logOut = (Button)findViewById(R.id.logoutid) ;
-        startService = (Button) findViewById(R.id.startserviceid);
-        stopService = (Button)findViewById(R.id.stopserviceid);
+        mySavedLocations = (CardView) findViewById(R.id.savedLocationsId);
+        logOut = (LinearLayout) findViewById(R.id.logoutid) ;
+        startService = (CardView) findViewById(R.id.startserviceid);
+        stopService = (CardView) findViewById(R.id.stopserviceid);
         txtLocation = (TextView)findViewById(R.id.textLocationId);
+       todolistid = (CardView)findViewById(R.id.todolistcardviewID);
+       title = (TextView)findViewById(R.id.titleid);
+       mobilemodes = (CardView)findViewById(R.id.mobilemodescardviewID);
 
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
 
-
+        Typeface MLight = Typeface.createFromAsset(getAssets(), "fonts/ML.ttf");
+        title.setTypeface(MLight);
                                                                                                     // ACCESSING SILENT MODE
-        silentMode.setOnClickListener(new View.OnClickListener() {
+
+
+        todolistid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    audioManager.setRingerMode(AudioManager.RINGER_MODE_SILENT);
-                }
-                catch(Exception e){
-
-                }
-
+                startActivity(new Intent(MainActivity.this,TaskSchedule.class));
+                finish();
             }
         });
-
-                                                                                                    //ACCESSING VIBRATE MODE
-        vibrateMode.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                audioManager.setRingerMode(AudioManager.RINGER_MODE_VIBRATE);
-            }
-        });
-                                                                                                    //ACCESSING RINGER MODE
-        ringerMode.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                audioManager.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
-            }
-        });
-
-
 
                                                                                                     //SCANNING LOCATION FOR SAVING INTO DATABASE
         scanLocation.setOnClickListener(new View.OnClickListener() {
@@ -186,6 +181,15 @@ public class MainActivity extends AppCompatActivity {
             });
 
 
+            mobilemodes.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(MainActivity.this,MobileModes.class));
+                    finish();
+                }
+            });
+
+
                                                                                                     //LOGOUT BUTTON FOR USER LOGOUT
 
             logOut.setOnClickListener(new View.OnClickListener() {
@@ -229,9 +233,7 @@ public class MainActivity extends AppCompatActivity {
             addressList = geocoder.getFromLocation(wayLatitude,wayLongitude,1);
             String add = addressList.get(0).getAddressLine(0);
             String area = addressList.get(0).getLocality();
-            String city = addressList.get(0).getAdminArea();
-            String country = addressList.get(0).getCountryName();
-            String full= add+" "+area+" "+city+" "+country;
+            String full= add+" "+area;
             addresstext.setText(full);
 
         } catch (Exception e) {
@@ -304,11 +306,16 @@ public class MainActivity extends AppCompatActivity {
                            catch(Exception e){
 
                            }
-                           Intent intent = new Intent(MainActivity.this, AlarmBroadcastReceiver.class);
-                           PendingIntent pendingIntent = PendingIntent.getBroadcast(MainActivity.this.getApplicationContext(),0,intent,0);
-                            AlarmManager alarmManager =(AlarmManager)getSystemService(ALARM_SERVICE);
-                            alarmManager.set(AlarmManager.RTC_WAKEUP,System.currentTimeMillis(),pendingIntent);
-                           Toast.makeText(MainActivity.this, "Alarm is on", Toast.LENGTH_SHORT).show();
+                           try{
+                               Intent intent = new Intent(MainActivity.this, Alarm.class);
+                               PendingIntent pendingIntent = PendingIntent.getBroadcast(MainActivity.this.getApplicationContext(),0,intent,0);
+                               AlarmManager alarmManager =(AlarmManager)getSystemService(ALARM_SERVICE);
+                               alarmManager.set(AlarmManager.RTC_WAKEUP,System.currentTimeMillis(),pendingIntent);
+                               Toast.makeText(MainActivity.this, "Alarm is on", Toast.LENGTH_SHORT).show();
+                           }
+                           catch (Exception e){
+                               Toast.makeText(MainActivity.this, "Alarm is not responding", Toast.LENGTH_SHORT).show();
+                           }
 
                        }
                     }

@@ -7,44 +7,104 @@
     tools:context=".LoginActivity"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/a03"
+    android:background="@drawable/a001"
+    android:padding="30dp"
     >
 
-    <EditText
+    <TextView
+
+        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:hint="Email"
-        android:textColor="@color/self_color"
-        android:textColorHint="@color/self_color"
-        android:id="@+id/loginemailid"/>
-    <EditText
+        android:layout_height="150dp"
+        android:text="My Account"
+        android:textStyle="bold"
+        android:textSize="50dp"
+        android:textColor="#41A6FF"
+        android:id="@+id/titleid"
+        />
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="50dp"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:hint="Password"
-        android:id="@+id/loginpasswordid"
-        android:textColorHint="@color/self_color"
-        android:textColor="@color/self_color"
-        android:inputType="numberPassword"
-
-        />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
 
 
+        >
 
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:text="Login"
-        android:id="@+id/loginid"
-        android:background="@drawable/custom_button"
-        android:layout_margin="15dp"
-        />
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:background="@drawable/custom_button"
-        android:text="Menu"
-        android:id="@+id/menubuttonid"
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/cardviewoutsidecolor"
+
+
+            >
+            <ImageView
+
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/circlebackgroundpurple"
+                android:src="@drawable/ic_launcher_account_white_foreground"
+                />
+
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:hint="Email"
+                android:id="@+id/loginemailid"
+                android:textColorHint="@color/self_color"
+                android:textColor="@color/self_color"
+                />
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:hint="Password"
+                android:id="@+id/loginpasswordid"
+                android:inputType="numberPassword"
+                android:textColorHint="@color/self_color"
+                android:textColor="@color/self_color"
+
+                />
+
+
+
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:text="Login"
+                android:id="@+id/loginid"
+                android:background="@drawable/custom_button"
+                android:layout_margin="15dp"
+                />
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="@drawable/custom_button"
+                android:text="Menu"
+                android:id="@+id/menubuttonid"
+                />
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
 
 
 </LinearLayout>

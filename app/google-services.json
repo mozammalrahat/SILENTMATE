@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "701283687723-fhgb3v9khn29nep8mj3gdcjj7r0j5gki.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.automaticphonesilencer",
+            "certificate_hash": "24174001bde7677222f1dd890f89a0d4d9d62ccc"
+          }
+        },
+        {
           "client_id": "701283687723-lapuuakne2022kp9vq6asp4jedrt4lnp.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

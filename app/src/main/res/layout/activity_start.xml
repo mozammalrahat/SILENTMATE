@@ -7,12 +7,23 @@
     tools:context=".StartActivity"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/a03"
+    android:background="@drawable/a001"
+    android:padding="30dp"
     >
+ <TextView
+    android:gravity="center"
+     android:layout_width="match_parent"
+     android:layout_height="300dp"
+     android:text="Smart Phone Silencer"
+     android:textStyle="bold"
+     android:textSize="50dp"
+     android:textColor="#41A6FF"
+     android:id="@+id/titleid"
+  />
 
 <Button
-    android:layout_width="200dp"
-    android:layout_height="60dp"
+    android:layout_width="300dp"
+    android:layout_height="50dp"
     android:id="@+id/registerid"
     android:text="register"
     android:background="@drawable/custom_button"
@@ -20,8 +31,8 @@
     />
  <Button
      android:layout_margin="15dp"
-     android:layout_width="200dp"
-     android:layout_height="60dp"
+     android:layout_width="300dp"
+     android:layout_height="50dp"
      android:text="login"
      android:background="@drawable/custom_button"
      android:id="@+id/login"/>

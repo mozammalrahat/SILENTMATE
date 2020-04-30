@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -72,29 +73,46 @@ public class MySavedLocations extends AppCompatActivity {
             }
         });
 
-//        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-//            @Override
-//            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-//                SparseBooleanArray positionchecker = listView.getCheckedItemPositions();
-//                int count = listView.getCount();
-//                for (int item =count-1;item>=0;item-- ){
+//        try {
+//            listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+//                @Override
+//                public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+//                    SparseBooleanArray positionchecker = listView.getCheckedItemPositions();
+//                    int count = listView.getCount();
+//                    for (int item =count-1;item>=0;item-- ){
 //
-//                    if(positionchecker.get(item)){
+//                        if(positionchecker.get(item)){
 //
-//                        String name = list.get(item).toString();
-//                        adapter.remove(list.get(item));
-//                        DatabaseReference reference =FirebaseDatabase.getInstance().getReference("ProgrammingKnowledge").child(name);
-//                        reference.removeValue();
+//                            String name = list.get(item).toString();
+////                        adapter.remove(list.get(item));
+//                            DatabaseReference reference =FirebaseDatabase.getInstance().getReference("ProgrammingKnowledge").child(name);
+//                            reference.removeValue();
+//                        }
+//
 //                    }
-//
+//                    positionchecker.clear();
+//                    adapter.notifyDataSetChanged();
+//                    return false;
 //                }
-//                positionchecker.clear();
-//                adapter.notifyDataSetChanged();
-//                return false;
-//            }
-//        });
+//            });
+//        }
+//        catch (Exception e){
+//            Toast.makeText(this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
+//        }
 
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
+               String name = list.get(position);
+                Toast.makeText(MySavedLocations.this, name, Toast.LENGTH_SHORT).show();
+                list.remove(position);
+                DatabaseReference reference =FirebaseDatabase.getInstance().getReference("Places").child(name);
+                            reference.removeValue();
+                            adapter.notifyDataSetChanged();
+                return false;
+            }
+        });
 
     }
 }

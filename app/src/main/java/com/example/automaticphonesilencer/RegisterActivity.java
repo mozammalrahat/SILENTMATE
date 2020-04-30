@@ -3,12 +3,14 @@ package com.example.automaticphonesilencer;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -23,7 +25,8 @@ public class RegisterActivity extends AppCompatActivity {
                                                                                                     //DECLARING VARIABLES
        private EditText email,password,username,confirm_password;                                   //EDIT TEXT VARIABLE FOR TAKING INPUT OF USER NAME EMAIL PASSWORD AND CONFIRM PASSWORD
        private Button register,menuButtonId;
-       private FirebaseAuth auth;                                                                   //FIREBASE AUTH VARIABLE FOR CREATING USER ACCOUNT WITH EMAIL AND PASSWORD
+       private FirebaseAuth auth;                                                                  //FIREBASE AUTH VARIABLE FOR CREATING USER ACCOUNT WITH EMAIL AND PASSWORD
+       private TextView title;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,10 @@ public class RegisterActivity extends AppCompatActivity {
         confirm_password = (EditText)findViewById(R.id.confirm_passwordid);
         menuButtonId = findViewById(R.id.registermenubuttonid);
         register = (Button)(findViewById(R.id.registerid2));
+        title = (TextView)findViewById(R.id.titleid);
+
+        Typeface MLight = Typeface.createFromAsset(getAssets(), "fonts/ML.ttf");
+        title.setTypeface(MLight);
 
 
                                                                                                     //REGISTERING INTO DATABASE WITH EMAIL AND PASSWORD CALLING THE REGISTER_USER METHOD
