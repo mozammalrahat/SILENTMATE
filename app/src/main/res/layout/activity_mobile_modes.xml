@@ -53,16 +53,16 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@color/cardviewoutsidecolor"
+            android:background="@drawable/gradient"
 
 
             >
             <ImageView
 
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:background="@drawable/circlebackgroundpurple"
-                android:src="@drawable/ic_launcher_ringer_white_foreground"
+                android:src="@drawable/ic_mobile_ringer"
                 />
             <View
                 android:layout_width="match_parent"
@@ -77,6 +77,7 @@
                 android:layout_marginTop="2dp"
                 android:text="Ringer"
                 android:textStyle="bold"
+                android:textSize="20dp"
                 android:textColor="@color/self_color"
 
                 />
@@ -108,16 +109,16 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@color/cardviewoutsidecolor"
+            android:background="@drawable/gradient"
 
 
             >
             <ImageView
 
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:background="@drawable/circlebackgroundpurple"
-                android:src="@drawable/ic_launcher_vibration_white_foreground"
+                android:src="@drawable/ic_mobile_vibrate"
                 />
             <View
                 android:layout_width="match_parent"
@@ -132,6 +133,7 @@
                 android:layout_marginTop="2dp"
                 android:text="Vibration"
                 android:textStyle="bold"
+                android:textSize="20dp"
                 android:textColor="@color/self_color"
 
                 />
@@ -163,16 +165,16 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@color/cardviewoutsidecolor"
+            android:background="@drawable/gradient"
 
 
             >
             <ImageView
 
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:background="@drawable/circlebackgroundpurple"
-                android:src="@drawable/ic_launcher_silent_white_foreground"
+                android:src="@drawable/ic_mobile_silent"
                 />
             <View
                 android:layout_width="match_parent"
@@ -187,6 +189,7 @@
                 android:layout_marginTop="2dp"
                 android:text="Silent"
                 android:textStyle="bold"
+                android:textSize="20dp"
                 android:textColor="@color/self_color"
 
                 />

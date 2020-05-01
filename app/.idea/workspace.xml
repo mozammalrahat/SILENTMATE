@@ -11,33 +11,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4471302d-fc07-4a37-bc7e-08a9e1197449" name="Default Changelist" comment="mid aprir">
+      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/google-services.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/automaticphonesilencer/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/automaticphonesilencer/LoginActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/automaticphonesilencer/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/automaticphonesilencer/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/automaticphonesilencer/MySavedLocations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/automaticphonesilencer/MySavedLocations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/automaticphonesilencer/RegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/automaticphonesilencer/RegisterActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/automaticphonesilencer/StartActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/automaticphonesilencer/StartActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/a01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/a02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/a03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/a04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/a05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/a06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/a07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/a08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/custom_button.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/custom_button.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/circlebackgroundpurple.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/circlebackgroundpurple.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/drawable/ic_power.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_edit_task_desk.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_edit_task_desk.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_home.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_mobile_modes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_mobile_modes.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_my_saved_locations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_my_saved_locations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_register.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_start.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_start.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/list_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_new_task.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_new_task.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/activity_task_schedule.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/activity_task_schedule.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/colors.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -125,12 +112,8 @@
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Auto matic phone silencer android\AutomaticPhoneSilencer\app\src\main\res\drawable" />
-      <recent name="E:\Auto matic phone silencer android\AutomaticPhoneSilencer\app\src\main\assets\fonts" />
-      <recent name="E:\Auto matic phone silencer android\AutomaticPhoneSilencer\app\src\main\java\com\example\automaticphonesilencer" />
-      <recent name="E:\Auto matic phone silencer android\AutomaticPhoneSilencer\app\src\main\res\layout" />
-      <recent name="E:\Auto matic phone silencer android\AutomaticPhoneSilencer\app\src\main" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.automaticphonesilencer" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.example.automaticphonesilencer" />
@@ -138,8 +121,12 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.automaticphonesilencer" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.automaticphonesilencer" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Auto matic phone silencer android\AutomaticPhoneSilencer\app\src\main\res\drawable" />
+      <recent name="E:\Auto matic phone silencer android\AutomaticPhoneSilencer\app\src\main\assets\fonts" />
+      <recent name="E:\Auto matic phone silencer android\AutomaticPhoneSilencer\app\src\main\java\com\example\automaticphonesilencer" />
+      <recent name="E:\Auto matic phone silencer android\AutomaticPhoneSilencer\app\src\main\res\layout" />
+      <recent name="E:\Auto matic phone silencer android\AutomaticPhoneSilencer\app\src\main" />
     </key>
   </component>
   <component name="RunDashboard">

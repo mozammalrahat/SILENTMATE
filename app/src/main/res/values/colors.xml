@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#000C5D</color>
     <color name="colorAccent">#FF4081</color>
     <color name="self_color"> #F0F8FF</color>
-    <color name="cardviewoutsidecolor">#040E3C</color>
+    <color name="cardviewoutsidecolor">#1B213C</color>
     <color name="cardviewinsidecolor">#053763</color>
 
 </resources>

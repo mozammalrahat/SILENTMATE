@@ -1,58 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:name="com.google.android.gms.maps.SupportMapFragment"
-    tools:context=".MainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="8"
+    android:background="@drawable/a001"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/a001"
+    android:weightSum="8"
+    tools:context=".MainActivity"
 
     >
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="0dp"
-       android:layout_weight="1.5"
-       android:weightSum="5"
-       android:orientation="vertical"
-       >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        android:orientation="vertical"
+        android:weightSum="5">
 
 
-       <TextView
-           android:gravity="center_horizontal"
-           android:layout_weight="4.9"
-           android:layout_width="match_parent"
-           android:layout_height="0dp"
-           android:text="Smart Phone Silencer"
-           android:textStyle="bold"
-           android:textSize="40dp"
-           android:textColor="#41A6FF"
-           android:id="@+id/titleid"
-           />
-       <TextView
-           android:layout_weight=".1"
-           android:layout_width="match_parent"
-           android:layout_height="20dp"
-           android:id="@+id/textLocationId"
-           android:text="Location Updates : 122.3333    96.85973"
-           android:textColor="@color/self_color"
+        <TextView
+            android:id="@+id/titleid"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.9"
+            android:gravity="center_horizontal"
+            android:text="Smart Phone Silencer"
+            android:textColor="#41A6FF"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
-           />
+        <TextView
+            android:id="@+id/textLocationId"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight=".1"
+            android:text="Location Updates : 122.3333    96.85973"
+            android:textColor="@color/self_color"
+
+            />
 
 
-   </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:weightSum="3"
-        android:orientation="vertical"
         android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="3"
 
         >
 
@@ -61,58 +60,51 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2.2"
-            android:weightSum="2"
-            android:orientation="horizontal"
             android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2"
 
             >
+
             <androidx.cardview.widget.CardView
+                android:id="@+id/getLocation"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight=".4"
                 android:clickable="true"
-                android:id="@+id/getLocation"
                 app:cardCornerRadius="30dp"
 
 
-
-
-
-
                 >
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center"
                     android:background="@color/cardviewoutsidecolor"
-
-
+                    android:gravity="center"
+                    android:orientation="vertical"
 
 
                     >
+
                     <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:src="@drawable/ic_launcher_place_white_foreground"
                         android:background="@drawable/circlebackgroundpurple"
+                        android:src="@drawable/ic_aaa_location_search"
 
                         />
 
                     <TextView
-                        android:gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
                         android:text="Scan"
                         android:textColor="@color/self_color"
                         android:textStyle="bold"
 
                         />
-
-
-
-
 
 
                 </LinearLayout>
@@ -125,18 +117,19 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1.6"
                 android:orientation="vertical"
-                android:weightSum="5"
-                >
+                android:weightSum="5">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="3"
                     android:gravity="center">
+
                     <TextView
+                        android:id="@+id/addressid"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="Address : "
-                        android:id="@+id/addressid"
                         android:textColor="@color/self_color"
 
                         />
@@ -151,24 +144,24 @@
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:weightSum="3">
+
                     <TextView
-                        android:layout_weight=".6"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        android:layout_weight=".6"
                         android:text="Latitude :"
                         android:textColor="@color/self_color"
 
                         />
+
                     <TextView
-                        android:layout_weight="2.4"
+                        android:id="@+id/textViewId1"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
+                        android:layout_weight="2.4"
+
                         android:text="98.365289"
-
-                        android:id="@+id/textViewId1"
-                        android:textColor="@color/self_color"
-                        />
-
+                        android:textColor="@color/self_color" />
 
 
                 </LinearLayout>
@@ -177,25 +170,25 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:weightSum="3"
+                    android:gravity="center"
                     android:orientation="horizontal"
-                    android:gravity="center">
-                    <TextView
-                        android:layout_weight=".6"
-                        android:layout_width="0dp"
+                    android:weightSum="3">
 
-                        android:layout_height="match_parent"
-                        android:text="Longitude :"
-                        android:textColor="@color/self_color"
-                        />
                     <TextView
-                        android:layout_weight="2.4"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:text="121.35698"
+
+                        android:layout_weight=".6"
+                        android:text="Longitude :"
+                        android:textColor="@color/self_color" />
+
+                    <TextView
                         android:id="@+id/textViewId2"
-                        android:textColor="@color/self_color"
-                        />
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.4"
+                        android:text="121.35698"
+                        android:textColor="@color/self_color" />
 
                 </LinearLayout>
 
@@ -203,91 +196,79 @@
             </LinearLayout>
 
 
-
-
-
-
-
-
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/placeNameId"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="@color/self_color"
-                android:textColorHint="@color/self_color"
                 android:hint="Please Provide Place Name "
-                android:id="@+id/placeNameId"/>
+                android:textColor="@color/self_color"
+                android:textColorHint="@color/self_color" />
 
         </LinearLayout>
 
 
-
-
-
-
-
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.3"
-        android:weightSum="2"
-        android:orientation="horizontal"
+        android:layout_weight="1.45"
         android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2"
 
         >
+
         <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:clickable="true"
             android:id="@+id/saveLocationid"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:clickable="true"
+
 
             >
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:background="@drawable/gradient"
                 android:gravity="center"
-                android:background="@color/cardviewoutsidecolor"
+                android:orientation="vertical"
 
                 >
+
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
                     android:background="@drawable/circlebackgroundpurple"
-                    android:src="@drawable/ic_launcher_location_white_foreground"
-                    />
+                    android:src="@drawable/ic_aaa_location_plus" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_margin="2dp"
-                    android:background="@color/cardview_dark_background"/>
+                    android:background="@color/cardview_dark_background" />
 
                 <TextView
-                    android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:textColor="@color/self_color"
+                    android:gravity="center"
                     android:text="SAVE CURRENT LOCATION"
+                    android:textColor="@color/self_color"
+                    android:textSize="10dp"
                     android:textStyle="bold"
 
                     />
-
-
-
-
 
 
             </LinearLayout>
@@ -296,115 +277,112 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/savedLocationsId"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:id="@+id/savedLocationsId"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:clickable="true"
 
             >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:background="@drawable/gradient"
                 android:gravity="center"
-                android:background="@color/cardviewoutsidecolor"
+                android:orientation="vertical"
 
 
                 >
+
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
                     android:background="@drawable/circlebackgroundpurple"
-                    android:src="@drawable/ic_launcher_folder_white_foreground"
+                    android:src="@drawable/ic_folder_files_and_folders_svgrepo_com"
 
                     />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_margin="2dp"
-                    android:background="@color/cardview_dark_background"/>
+                    android:background="@color/cardview_dark_background" />
 
                 <TextView
-                    android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
-                    android:textColor="@color/self_color"
+                    android:gravity="center"
                     android:text="MY SAVED LOCATIONS"
+                    android:textColor="@color/self_color"
+                    android:textSize="10dp"
                     android:textStyle="bold"
 
                     />
 
 
-
-
-
-
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
 
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.3"
-        android:weightSum="2"
-        android:orientation="horizontal"
+        android:layout_weight="1.45"
         android:gravity="center"
-        >
+        android:orientation="horizontal"
+        android:weightSum="2">
+
         <androidx.cardview.widget.CardView
+            android:id="@+id/startserviceid"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:id="@+id/startserviceid"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:clickable="true"
 
             >
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:background="@drawable/gradient"
                 android:gravity="center"
-                android:background="@color/cardviewoutsidecolor"
+                android:orientation="vertical"
 
                 >
+
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:src="@drawable/ic_launcher_place_white_foreground"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
                     android:background="@drawable/circlebackgroundpurple"
-                    />
+                    android:src="@drawable/ic_aaa_location_search_svgrepo_com" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_margin="2dp"
-                    android:background="@color/cardview_dark_background"/>
+                    android:background="@color/cardview_dark_background" />
 
                 <TextView
-                    android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+
                     android:text="TURN ON AUTO SCAN"
-                    android:textStyle="bold"
                     android:textColor="@color/self_color"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
 
                     />
-
-
-
-
 
 
             </LinearLayout>
@@ -413,14 +391,14 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/stopserviceid"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:id="@+id/stopserviceid"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:clickable="true"
             app:cardCornerRadius="30dp"
 
             >
@@ -428,43 +406,40 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:background="@drawable/gradient"
                 android:gravity="center"
-                android:background="@color/cardviewoutsidecolor"
+                android:orientation="vertical"
 
                 >
+
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:src="@drawable/ic_location_off_white_24dp"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
                     android:background="@drawable/circlebackgroundpurple"
+                    android:src="@drawable/ic_aaa__not_location"
 
                     />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_margin="2dp"
-                    android:background="@color/cardview_dark_background"/>
+                    android:background="@color/cardview_dark_background" />
 
                 <TextView
-                    android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+
                     android:text="TURN OFF AUTO SCAN"
-                    android:textStyle="bold"
                     android:textColor="@color/self_color"
-                    />
-
-
-
-
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
 
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
 
 
     </LinearLayout>
@@ -473,56 +448,54 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.4"
-        android:weightSum="2"
-        android:orientation="horizontal"
+        android:layout_weight="1.45"
         android:gravity="center"
-        >
+        android:orientation="horizontal"
+        android:weightSum="2">
+
         <androidx.cardview.widget.CardView
+            android:id="@+id/mobilemodescardviewID"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:id="@+id/mobilemodescardviewID"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:clickable="true"
 
             >
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:background="@drawable/gradient"
                 android:gravity="center"
-                android:background="@color/cardviewoutsidecolor"
+                android:orientation="vertical"
 
                 >
+
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
                     android:background="@drawable/circlebackgroundpurple"
-                    android:src="@drawable/ic_launcher_mode_white_foreground"
-                    />
+                    android:src="@drawable/ic_aaa_smartphone_svgrepo_com" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_margin="2dp"
-                    android:background="@color/cardview_dark_background"/>
+                    android:background="@color/cardview_dark_background" />
 
                 <TextView
-                    android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
+                    android:gravity="center"
                     android:text="MOBILE MODES"
                     android:textColor="@color/self_color"
+                    android:textSize="10dp"
                     android:textStyle="bold"
 
                     />
-
-
-
-
 
 
             </LinearLayout>
@@ -531,53 +504,51 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/todolistcardviewID"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:id="@+id/todolistcardviewID"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:clickable="true"
 
             >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:background="@drawable/gradient"
                 android:gravity="center"
-                android:background="@color/cardviewoutsidecolor"
+                android:orientation="vertical"
 
-                
+
                 >
+
                 <ImageView
 
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
                     android:background="@drawable/circlebackgroundpurple"
-                    android:src="@drawable/ic_launcher_time_white_foreground"
-                    />
+                    android:src="@drawable/ic_aaa_interface_todo3" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_margin="2dp"
-                    android:background="@color/cardview_dark_background"/>
+                    android:background="@color/cardview_dark_background" />
 
                 <TextView
-                    android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+
                     android:text="MY TO DO LIST"
-                    android:textStyle="bold"
                     android:textColor="@color/self_color"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
 
                     />
-
-
-
-
 
 
             </LinearLayout>
@@ -586,36 +557,38 @@
         </androidx.cardview.widget.CardView>
 
 
-
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/logoutid"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight=".5"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:background="@color/colorAccent"
+        android:background="#1B213C"
         android:clickable="true"
-        android:id="@+id/logoutid"
+        android:gravity="center"
+        android:layout_weight=".6"
+        android:orientation="horizontal"
 
         >
+
         <ImageView
 
-            android:layout_width="wrap_content"
+            android:layout_width="40dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_power"
+
             />
+
         <TextView
-            android:layout_marginLeft="20dp"
-            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
             android:text="Log Out"
             android:textAppearance="?android:textAppearanceLarge"
-            android:textStyle="bold"
+            android:textColor="@color/self_color"
             android:textSize="25dp"
-            android:textColor="@color/self_color"/>
+            android:textStyle="bold" />
 
 
     </LinearLayout>

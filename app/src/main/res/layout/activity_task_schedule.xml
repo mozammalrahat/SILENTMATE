@@ -6,14 +6,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4F4F4"
+    android:background="@drawable/a001"
     tools:context=".TaskSchedule">
 
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/cardviewoutsidecolor"
         android:layout_height="198dp">
 
         <LinearLayout
@@ -52,7 +52,7 @@
                         android:layout_marginTop="20dp"
                         android:textSize="32sp"
                         android:textColor="#FFF"
-                        android:text="My Task"
+                        android:text="My Tasks"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 

@@ -88,8 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
         requestPermission();
 
-                                                                                                    //ACCESSING ALL THE BUTTON , EDIT TEXT AND TEXT VIEW OF XML FILE
-
+                                                                                                       //ACCESSING ALL THE BUTTON , EDIT TEXT AND TEXT VIEW OF XML FILE
         client = LocationServices.getFusedLocationProviderClient(this);
         latitudeId = (TextView) findViewById(R.id.textViewId1);
         longitudeId = (TextView) findViewById(R.id.textViewId2);
@@ -114,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
 
         Typeface MLight = Typeface.createFromAsset(getAssets(), "fonts/ML.ttf");
         title.setTypeface(MLight);
+
                                                                                                     // ACCESSING SILENT MODE
 
 
@@ -233,7 +233,7 @@ public class MainActivity extends AppCompatActivity {
             addressList = geocoder.getFromLocation(wayLatitude,wayLongitude,1);
             String add = addressList.get(0).getAddressLine(0);
             String area = addressList.get(0).getLocality();
-            String full= add+" "+area;
+            String full= add;
             addresstext.setText(full);
 
         } catch (Exception e) {
@@ -282,6 +282,7 @@ public class MainActivity extends AppCompatActivity {
 
                                                                                                     //FOR STOPPING THE AUTOMATIC SCAN AFTER 15 SEC CONSECUTIVELY
     public void stopRepeating(View v){
+
         mHandler.removeCallbacks(mToastRunnable);
     }
 
